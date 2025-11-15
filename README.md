@@ -1,6 +1,6 @@
 # Analyse de Musique - Projet SKKU Language Technology
 
-Projet d'analyse linguistique des paroles de chansons populaires en France, Espagne et Corée.
+Projet d'analyse linguistique des paroles de chansons populaires en France, Espagne et Corée utilisant le NLP (Natural Language Processing).
 
 ## 🎯 Objectif
 
