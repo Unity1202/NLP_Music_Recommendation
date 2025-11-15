@@ -1,129 +1,129 @@
-# Analyse de Musique - Projet SKKU Language Technology
+# Music Analysis - SKKU Language Technology Project
 
-Projet d'analyse linguistique des paroles de chansons populaires en France, Espagne et Corée utilisant le NLP (Natural Language Processing).
+Linguistic analysis project of popular song lyrics from France, Spain, and Korea using NLP (Natural Language Processing).
 
-## 🎯 Objectif
+## 🎯 Objective
 
-Ce projet vise à analyser et comparer les paroles des top 20 chansons de trois pays (France, Espagne, Corée) afin de :
-- analyser la fréquence des mots par pays
-- identifier les mots communs entre les langues
-- effectuer une analyse de sentiment
-- calculer la similarité sémantique entre chansons
-- recommander des chansons similaires basées sur le contenu et le sentiment
+This project aims to analyze and compare the lyrics of the top 20 songs from three countries (France, Spain, Korea) in order to:
+- analyze word frequency by country
+- identify common words across languages
+- perform sentiment analysis
+- calculate semantic similarity between songs
+- recommend similar songs based on content and sentiment
 
-## 📊 Fonctionnalités
+## 📊 Features
 
-### 1. Prétraitement des données
-- nettoyage des paroles (suppression des balises, normalisation)
-- tokenisation
-- étiquetage morphosyntaxique (pos tagging)
-- lemmatisation
-- suppression des mots vides (stop words)
-- limitation des doublons
+### 1. Data Preprocessing
+- lyrics cleaning (removal of tags, normalization)
+- tokenization
+- morphosyntactic tagging (POS tagging)
+- lemmatization
+- stop words removal
+- duplicate limitation
 
-### 2. Analyse de fréquence
-- calcul des 20 mots les plus fréquents par pays
-- génération de nuages de mots (word clouds)
-- identification du vocabulaire commun entre les trois langues
+### 2. Frequency Analysis
+- calculation of the 20 most frequent words per country
+- word cloud generation
+- identification of common vocabulary across the three languages
 
-### 3. Analyse de sentiment
-- analyse de sentiment par section (intro, verse, chorus, etc.)
-- classification positive/neutre/négative
-- calcul du sentiment global par pays
+### 3. Sentiment Analysis
+- sentiment analysis by section (intro, verse, chorus, etc.)
+- positive/neutral/negative classification
+- global sentiment calculation per country
 
-### 4. Similarité sémantique
-- comparaison de similarité avec spacy (cosine similarity)
-- comparaison de similarité avec sbert (sentence transformers)
-- identification des chansons les plus similaires entre pays
+### 4. Semantic Similarity
+- similarity comparison using spaCy (cosine similarity)
+- similarity comparison using sBERT (sentence transformers)
+- identification of the most similar songs between countries
 
-### 5. Système de recommandation
-- recommandation de chansons similaires basée sur la similarité sémantique
-- filtrage par sentiment (recommandations avec même sentiment)
-- top 3 recommandations par chanson
+### 5. Recommendation System
+- recommendation of similar songs based on semantic similarity
+- sentiment filtering (recommendations with same sentiment)
+- top 3 recommendations per song
 
-## 📈 Résultats principaux
+## 📈 Main Results
 
-### Analyse de sentiment
-- **corée** : positif (0.55) - les chansons coréennes montrent un sentiment globalement positif
-- **france** : neutre (-0.03) - sentiment équilibré
-- **espagne** : neutre (-0.19) - légèrement négatif mais proche du neutre
+### Sentiment Analysis
+- **Korea**: positive (0.55) - Korean songs show an overall positive sentiment
+- **France**: neutral (-0.03) - balanced sentiment
+- **Spain**: neutral (-0.19) - slightly negative but close to neutral
 
-### Vocabulaire
-- **mots les plus fréquents** : baby, time, night, love, heart, etc.
-- **vocabulaire commun** : 100+ mots partagés entre les trois langues
+### Vocabulary
+- **most frequent words**: baby, time, night, love, heart, etc.
+- **common vocabulary**: 100+ words shared across the three languages
 
-### Système de recommandation musicale
-- système fonctionnel qui recommande les 3 chansons similaires d'une chanson donnée basé sur la similarité sémantique et le sentiment
+### Music Recommendation System
+- functional system that recommends the 3 most similar songs for a given song based on semantic similarity and sentiment
 
-## 📝 Notes importantes
+## 📝 Important Notes
 
-- **langue d'analyse** : les paroles sont analysées en anglais (traductions des paroles originales)
-- **modèle de sentiment** : `distilbert-base-uncased-finetuned-sst-2-english` (optimisé pour l'anglais)
-- **modèles de similarité** :
-  - spaCy : `en_core_web_lg` (modèle large pour l'anglais)
-  - sBERT : `all-MiniLM-L6-v2` (modèle compact et rapide)
-- **recommandations** : basées sur la similarité sémantique (sBERT) et le filtrage par sentiment
-- **données** : les fichiers `TOP20_*.txt` contiennent les paroles des top 20 chansons de chaque pays
+- **analysis language**: lyrics are analyzed in English (translations of original lyrics)
+- **sentiment model**: `distilbert-base-uncased-finetuned-sst-2-english` (optimized for English)
+- **similarity models**:
+  - spaCy: `en_core_web_lg` (large model for English)
+  - sBERT: `all-MiniLM-L6-v2` (compact and fast model)
+- **recommendations**: based on semantic similarity (sBERT) and sentiment filtering
+- **data**: the `TOP20_*.txt` files contain the lyrics of the top 20 songs from each country
 
-## 📦 Dépendances principales
-- `nltk` - traitement du langage naturel
-- `spacy` - similarité sémantique avec modèles pré-entraînés
-- `transformers` - analyse de sentiment avec distilbert
-- `sentence-transformers` - embeddings sémantiques avec sbert
-- `wordcloud` - visualisation des mots les plus fréquents
-- `matplotlib` - visualisation des données
-- `pandas` - manipulation des données
+## 📦 Main Dependencies
+- `nltk` - natural language processing
+- `spacy` - semantic similarity with pre-trained models
+- `transformers` - sentiment analysis with distilbert
+- `sentence-transformers` - semantic embeddings with sbert
+- `wordcloud` - visualization of most frequent words
+- `matplotlib` - data visualization
+- `pandas` - data manipulation
 
 ## 🚀 Installation
 
-### Prérequis
+### Prerequisites
 - python 3.7+
-- jupyter notebook ou jupyter lab
+- jupyter notebook or jupyter lab
 
-### Installation des dépendances
+### Dependency Installation
 
 ```bash
-# installer les packages python
+# install python packages
 pip install nltk spacy transformers sentence-transformers wordcloud matplotlib pandas
 
-# télécharger les modèles spacy
+# download spacy models
 python -m spacy download en_core_web_lg
 
 ```
 
-## 💻 Utilisation
+## 💻 Usage
 
-1. **ouvrir le notebook jupyter** :
+1. **open jupyter notebook**:
    ```bash
    jupyter notebook MusicAnalysis.ipynb
    ```
-   ou
+   or
    ```bash
    jupyter lab MusicAnalysis.ipynb
    ```
 
-2. **exécuter les cellules dans l'ordre** :
-   - le notebook est organisé en sections (I à VII)
-   - exécuter toutes les cellules pour obtenir les résultats complets
-   - certaines cellules peuvent prendre du temps (téléchargement des modèles, calculs de similarité)
+2. **execute cells in order**:
+   - the notebook is organized in sections (I to VII)
+   - execute all cells to get complete results
+   - some cells may take time (model downloads, similarity calculations)
 
-3. **utiliser le système de recommandation** :
-   - exécuter la section VII (Songs Recommendations)
-   - le système recommande des chansons similaires basées sur la similarité sémantique et le sentiment
+3. **use the recommendation system**:
+   - execute section VII (Songs Recommendations)
+   - the system recommends similar songs based on semantic similarity and sentiment
 
-## 📁 Structure du projet
+## 📁 Project Structure
 
 ```
 .
 ├── MusicAnalysis.ipynb
-├── TOP20_fr.txt          # paroles des top 20 chansons françaises
-├── TOP20_es.txt          # paroles des top 20 chansons espagnoles
-├── TOP20_kr.txt          # paroles des top 20 chansons coréennes
-├── stop_words_english.txt # mots vides supplémentaires
-├── Final_report.pdf   # rapport final
+├── TOP20_fr.txt          # lyrics of top 20 French songs
+├── TOP20_es.txt          # lyrics of top 20 Spanish songs
+├── TOP20_kr.txt          # lyrics of top 20 Korean songs
+├── stop_words_english.txt # additional stop words
+├── Final_report.pdf   # final report
 └── README.md
 ```
 
-## 👥 Auteur
+## 👥 Authors
 
 Alexis DHERMY, Pablo Picó Salort
