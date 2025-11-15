@@ -4,7 +4,7 @@ Linguistic analysis project of popular song lyrics from France, Spain, and Korea
 
 ## 🎯 Objective
 
-This project aims to analyze and compare the lyrics of the top 20 songs from three countries (France, Spain, Korea) in order to:
+This project aims to analyze and compare the lyrics of Spotify's Top 20 songs (December 2024) from three countries (France, Spain, Korea) in order to:
 - analyze word frequency by country
 - identify common words across languages
 - perform sentiment analysis
@@ -115,12 +115,12 @@ python -m spacy download en_core_web_lg
 
 ```
 .
-├── MusicAnalysis.ipynb
+├── MusicAnalysis.ipynb   # main notebook
 ├── TOP20_fr.txt          # lyrics of top 20 French songs
 ├── TOP20_es.txt          # lyrics of top 20 Spanish songs
 ├── TOP20_kr.txt          # lyrics of top 20 Korean songs
 ├── stop_words_english.txt # additional stop words
-├── Final_report.pdf   # final report
+├── Final_report.pdf      # report of the project
 └── README.md
 ```
 
