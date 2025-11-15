@@ -126,4 +126,4 @@ python -m spacy download en_core_web_lg
 
 ## 👥 Authors
 
-Alexis DHERMY, Pablo Picó Salort
+Alexis Dhermy, Pablo Picó Salort
